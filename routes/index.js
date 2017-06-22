@@ -28,7 +28,7 @@ router.get('/welcomeppl', function(req, res, next) {
     docs.insert({"name": "chd", "place": "awesome"}, function (err, docs) {
         if (err) console.log(err)
 
-        else res.send("success");
+        else res.send("Welcome to heroku");
 
     });
 
