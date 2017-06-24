@@ -13,7 +13,7 @@ const docs=db.get('dbs');
 router.get('/welcome', function(req, res, next) {
   //res.render('index', { title: 'Express' });
 
-    docs.find( {"id":"20170623"} ,function (err,docs) {
+    docs.find( {"id": "20170623"} ,function (err,docs) {
       if(err) console.log(err);
       else res.json(docs[1]);
 
