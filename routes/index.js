@@ -15,7 +15,7 @@ router.get('/welcome', function(req, res, next) {
 
     docs.find( {"id": "20170623"} ,function (err,docs) {
       if(err) console.log(err);
-      else res.json(docs[1]);
+      else res.json(docs);
 
   });
 
