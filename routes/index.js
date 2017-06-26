@@ -24,10 +24,11 @@ router.get('/welcome', function(req, res, next) {
 
 });
 
-router.get('/welcomeppl', function(req, res, next) {
+router.post('/welcomeppl', function(req, res, next) {
+var username = req.body.name;
+var pass=req.body.password;
 
-
-   docs.insert({"name": "chd", "place": "awesome"}, function (err, docs) {
+   docs.insert({"name": username, "password": pass}, function (err, docs) {
         if (err) console.log(err)
 
       else res.send("Welcome to heroku");
