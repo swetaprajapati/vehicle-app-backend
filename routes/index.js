@@ -39,8 +39,8 @@ var pass=req.body.password;
 
 
 router.get('/geolocation',function (req,res,next) {
-    var latitude = req.body.lat;
-    var longitude = req.body.long;
+    var latitude = req.body.latitude;
+    var longitude = req.body.longitude;
 
     docs.insert({"lat": latitude,"long":longitude}, function (err,docs) {
         if (err) console.log(err)
