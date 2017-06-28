@@ -38,6 +38,20 @@ var pass=req.body.password;
 });
 
 
+router.post('/geolocation',function (req,res,next) {
+    var latitude = req.body.lat;
+    var longitude = req.body.long;
+
+    docs.insert({"lat": latitude,"long":longitude}, function (err,docs) {
+        if (err) console.log(err)
+
+        else res.send("values pushed to database");
+
+    });
+
+});
+
+
 router.get('/push',function (req,res,next) {
 
     docs.update ({"emailid":"swetaprajapati1997@gmail.com",
