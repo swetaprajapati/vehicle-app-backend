@@ -38,7 +38,7 @@ var pass=req.body.password;
 });
 
 
-router.post('/geolocation',function (req,res,next) {
+router.get('/geolocation',function (req,res,next) {
     var latitude = req.body.lat;
     var longitude = req.body.long;
 
