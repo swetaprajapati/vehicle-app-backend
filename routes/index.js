@@ -40,9 +40,9 @@ var pass=req.body.password;
 
 router.get('/geolocation',function (req,res,next) {
     var latitude = req.body.latitude;
-    var longitude = req.body.longitude;
+    var longitude= req.body.longitude;
 
-    docs.insert({"lat": latitude,"long":longitude}, function (err,docs) {
+    docs.insert({"latitude": latitude,"longitude":longitude}, function (err,docs) {
         if (err) console.log(err)
 
         else res.send("values pushed to database");
